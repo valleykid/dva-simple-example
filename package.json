@@ -1,0 +1,42 @@
+{
+  "name": "dva-simple-example",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/valleykid/dva-simple-example.git",
+  "author": "valleykid <valleykiddy@gmail.com>",
+  "devDependencies": {
+    "atool-build": "^0.11.1",
+    "babel-plugin-import": "^1.2.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "dora": "^0.4.3",
+    "dora-plugin-livereload": "^0.6.0",
+    "dora-plugin-proxy": "^0.8.5",
+    "dora-plugin-webpack": "^0.8.1",
+    "html-webpack-hashfix-plugin": "^0.1.5",
+    "html-webpack-plugin": "^2.28.0",
+    "mockjs": "^1.0.1-beta3"
+  },
+  "dependencies": {
+    "antd": "^2.10.2",
+    "babel-runtime": "^6.23.0",
+    "dva": "^1.2.1",
+    "dva-loading": "^0.2.1",
+    "react": "15.4.0",
+    "react-dom": "15.4.0"
+  },
+  "theme": {
+    "@primary-color": "#1DA57A",
+    "@link-color": "#1DA57A",
+    "@border-radius-base": "2px",
+    "@font-size-base": "16px",
+    "@line-height-base": "1.2"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production atool-build -o ./dist",
+    "start": "NODE_ENV=development dora --plugins=proxy?watchDirs=./mock,webpack,livereload"
+  },
+  "entry": {
+    "user": "./src/entry/user.js"
+  },
+  "license": "MIT"
+}
