@@ -36,7 +36,7 @@
     "start": "NODE_ENV=development dora --plugins=proxy?watchDirs=./mock,webpack,livereload"
   },
   "entry": {
-    "user": "./src/entry/user.js"
+    "user": "./src/index.js"
   },
   "license": "MIT"
 }

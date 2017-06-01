@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'dva';
 import { Table, Pagination, Popconfirm, Button } from 'antd';
 import { routerRedux } from 'dva/router';
-import styles from './Users.css';
-import { PAGE_SIZE } from '../../constants';
+import styles from './Users.module.css';
+import { PAGE_SIZE } from '../../utils/constants';
 import UserModal from './UserModal';
 
 function Users({ dispatch, list: dataSource, loading, total, page: current }) {

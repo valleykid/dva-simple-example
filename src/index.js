@@ -20,7 +20,7 @@ app.use(createLoading());
 // Moved to router.js
 
 // 4. Router
-app.router(require('../routes'));
+app.router(require('./routes'));
 
 // 5. Start
 app.start('#react-content');
