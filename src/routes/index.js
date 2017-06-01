@@ -17,7 +17,7 @@ function RouterConfig({ history, app }) {
       getComponent(nextState, cb) {
         require.ensure([], (require) => {
           cb(null, require('./IndexPage'));
-        });
+        }, 'index.ensure');
       },
     },
     {
@@ -27,7 +27,7 @@ function RouterConfig({ history, app }) {
         require.ensure([], (require) => {
           registerModel(app, require('../models/users'));
           cb(null, require('./Users'));
-        });
+        }, 'user.ensure');
       },
     },
   ];
